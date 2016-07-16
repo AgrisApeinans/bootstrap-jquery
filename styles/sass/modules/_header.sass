@@ -1,0 +1,33 @@
+
+
+.navbar
+  background-color: $header-color
+  font-weight: bold
+
+  &-brand
+    font-family: "Galada", cursive, sans-serif
+    font-size: 28px
+    transform: skewX(0deg)
+    transition: all 0.2s
+    &:hover
+      transform: skewX(15deg)
+
+@media only screen and (max-width: 768px)
+  .navbar-mod
+    position: fixed
+    top: -52px
+    width: 100%
+    z-index: 1
+  .navbar-header-mod
+
+  .navbar-toggle-mod
+    position: absolute
+    bottom: -38px
+    left: 50%
+    transform: translateX(-50%)
+    padding: 0px 14px
+    padding-bottom: 9px
+    padding-top: 5px
+    border-radius: 0px
+    border-bottom-right-radius: 25px
+    border-bottom-left-radius: 25px
