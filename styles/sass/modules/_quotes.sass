@@ -1,0 +1,40 @@
+
+.flip-container:hover .flipper, .flip-container.hover .flipper
+  transform: rotateY(180deg)
+
+
+.flip-container
+  width: 200px
+  margin: 10px
+
+/* flip speed goes here */
+.flipper
+  width: 100px
+  margin: 0 auto
+  transition: 0.6s
+  transform-style: preserve-3d
+  position: relative
+
+/* hide back of pane during swap */
+.flipper-front, .flipper-back
+  width: 100px
+  height: 100px
+
+.flipper-back
+  backface-visibility: hidden
+  position: absolute
+  top: 0
+  left: 0
+  transform: rotateY(180deg)
+  line-height: 100px
+  text-align: center
+  background: $flipper-color
+/* front pane, placed above back */
+.flipper-front
+  background: url("../../img/person.png")
+  z-index: 2
+  /* for firefox 31 */
+  transform: rotateY(0deg)
+
+
+/* back, initially hidden pane */

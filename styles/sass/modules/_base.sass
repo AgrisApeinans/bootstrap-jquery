@@ -1,6 +1,19 @@
 body
   position: relative
+  display: flex
+  min-height: 100vh
+  flex-direction: column
   font-family: 'Source Sans Pro', sans-serif
   font-size: 16px
   background-size: 10px 10px
   background-image: linear-gradient(transparent 50%, rgba(0, 172, 200, 0.04) 50%, rgba(0, 200, 196, 0.08)), linear-gradient(90deg, transparent 50%, rgba(0, 183, 200, 0.1) 50%, rgba(0, 192, 200, 0.1))
+
+.main-content
+  display: flex
+  flex: 1
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: center
+
+  &-padding
+    padding: 0 5vw

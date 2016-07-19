@@ -4,6 +4,7 @@
         $(".blur-all").toggle();
         $(this).parent().toggleClass("is-lightbox");
         var text = $(this).find(".content-block-img-label").text();
+        $(this).parent().scrollTop(0);
         $(this).find(".content-block-img-label").text(
                 text == "Click to read on" ? "Click again to close" : "Click to read on");
         }
