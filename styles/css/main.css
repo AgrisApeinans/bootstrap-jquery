@@ -156,17 +156,15 @@ body {
       width: auto;
       padding-bottom: 90px; }
     .is-lightbox .content-block-thumbnail {
+      position: relative;
       text-align: center; }
     .is-lightbox .content-block-img {
       width: 70%; }
       .is-lightbox .content-block-img-label {
-        bottom: auto;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%);
-        font-size: 18px; } }
-.flip-container:hover .flipper, .flip-container.hover .flipper {
+        bottom: 5px;
+        left: 17%;
+        font-size: 16px; } }
+.flip-container:hover .flipper {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg); }
 
@@ -174,7 +172,6 @@ body {
   width: 200px;
   margin: 10px; }
 
-/* flip speed goes here */
 .flipper {
   width: 100px;
   margin: 0 auto;
@@ -184,7 +181,6 @@ body {
           transform-style: preserve-3d;
   position: relative; }
 
-/* hide back of pane during swap */
 .flipper-front, .flipper-back {
   width: 100px;
   height: 100px; }
@@ -201,14 +197,33 @@ body {
   text-align: center;
   background: slategrey; }
 
-/* front pane, placed above back */
 .flipper-front {
   background: url("../../img/person.png");
-  z-index: 2;
-  /* for firefox 31 */
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg); }
 
-/* back, initially hidden pane */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.fade-in, .fade-in-fast {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in;
+          animation: fadeIn ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
+
+.fade-in-fast {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s; }
 
 /*# sourceMappingURL=main.css.map */
